@@ -17,7 +17,7 @@ function App() {
   const getData = async () => {
     axios
       .get(
-        "http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=5b02411f2d86893aaf3fc1ef179976a8&units=metric"
+        `http://api.openweathermap.org/data/2.5/forecast?q=Jakarta&appid=${process.env.REACT_APP_KEY}&units=metric`
       )
       .then((res) => {
         console.log(res.data.list);
